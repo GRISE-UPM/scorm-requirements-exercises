@@ -39,7 +39,7 @@ The elevator must comply with the safety regulations listed in [REF-01].
 
 ## 1.5 SRS Overview
 
-This SRS follows the outline of ISO/IEC/IEEE 29148:2018. The sections of the outline that do not appear have been omitted for simplicity; notice that this reason is valid only in the framework of this academic course. Requirements are identified as FUN(xx) for functional, PER(xx) for performance, and QUA(xx) for quality requirements. Each requirement is a single sentence that uses the verb "shall".
+This SRS follows the outline of ISO/IEC/IEEE 29148:2018. The sections of the outline that do not appear have been omitted for simplicity; notice that this reason is valid only in the framework of this academic course. Requirements are identified as FUN(xx) for functional, PER(xx) for performance, and QUA(xx) for quality requirements. Each requirement is a singular sentence that uses the verb "shall".
 
 # 2 References
 

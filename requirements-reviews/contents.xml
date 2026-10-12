@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contents>
-    <document>
-        <file>SRS-elevator.xml</file>
-        <title>SRS: ACME elevator FAMILY model</title>
-    </document>
-    <document>
-        <file>ERS-microwave.xml</file>
-        <title>Software Requirements Specification: ACME microwave oven ABC model</title>
-    </document>
-    <document>
-        <file>SRS-acme-library.xml</file>
-        <title>ACME Municipal Library Information System</title>
-    </document>
+    <!-- Reviewed specifications. Only the files listed in <document> are offered to the students. -->
+    <document><file>SRS-elevator.xml</file></document>
+    <document><file>SRS-acme-library.xml</file></document>
+    <document><file>SRS-battery-recycling.xml</file></document>
+
+    <!-- Specifications that have not been reviewed yet. The packages ignore this element, so they are not
+         offered to the students. When a specification is reviewed, move its <file> to a <document> above. -->
+    <notReviewed>
+        <file>SRS-microwave.xml</file>
+        <file>SRS-display-management.xml</file>
+        <file>SRS-welding-monitoring.xml</file>
+        <file>SRS-internet-phone-agenda.xml</file>
+        <file>SRS-laptop-loan.xml</file>
+        <file>SRS-diabetes-self-test.xml</file>
+        <file>SRS-cable-tv-purchase.xml</file>
+        <file>SRS-civil-protection-resource-management.xml</file>
+        <file>SRS-customer-loyalty.xml</file>
+    </notReviewed>
 </contents>
