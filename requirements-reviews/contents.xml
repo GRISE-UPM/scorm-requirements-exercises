@@ -4,6 +4,7 @@
     <document><file>SRS-elevator.xml</file></document>
     <document><file>SRS-acme-library.xml</file></document>
     <document><file>SRS-battery-recycling.xml</file></document>
+    <document><file>SRS-cable-tv-purchase.xml</file></document>
 
     <!-- Specifications that have not been reviewed yet. The packages ignore this element, so they are not
          offered to the students. When a specification is reviewed, move its <file> to a <document> above. -->
@@ -14,7 +15,6 @@
         <file>SRS-internet-phone-agenda.xml</file>
         <file>SRS-laptop-loan.xml</file>
         <file>SRS-diabetes-self-test.xml</file>
-        <file>SRS-cable-tv-purchase.xml</file>
         <file>SRS-civil-protection-resource-management.xml</file>
         <file>SRS-customer-loyalty.xml</file>
     </notReviewed>

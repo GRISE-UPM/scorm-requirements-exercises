@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <title>SRS: Cable TV Package Purchase System</title>
+    <instructions></instructions>
+    <text>
+# 1 Introduction
+
+## 1.1 Purpose
+
+This SRS specifies the requirements of the Cable TV Package Purchase System (TV2P) for its procurement. It is intended for the customer service managers of the cable TV company, who will contract its development, and for the suppliers that will bid for it.
+
+## 1.2 Scope
+
+The Cable TV Package Purchase System (TV2P) manages the contracting of cable TV programming packages. Purchases are made by telephone, so the customer talks to an operator of the customer service center, who registers the purchase in TV2P. TV2P handles the information about the packages and their availability, the registration of purchases and rejections, the validation of the phone line, the payment in full by telephone bill or credit card <defect type="Appropriate" weight="1" comment="The Scope should describe at a high level what the system handles. This detail is not needed to understand the scope and belongs, if at all, in the requirements, so the level of detail is inappropriate.">(partial payments are not accepted)</defect>, the management of operators and packages, and the daily report. TV2P does not handle the billing of the contracted packages or the installation of the equipment at the customer's home.
+
+## 1.3 Product Overview
+
+### 1.3.1 Product perspective
+
+The system has the following interfaces.
+
+- Telephone company line qualification service (<defect type="Complete" weight="1" comment="The acronym LQS is used, but it is not defined in Section 5.2, so its meaning is not available to the reader.">LQS</defect>), see [REF-01].
+- Credit card payment gateway, see [REF-02].
+
+### 1.3.3 User characteristics
+
+TV2P operators come from many different social environments, and therefore their computing skills are extremely variable. The system must therefore display a help text on every screen.
+
+### 1.3.4 Limitations
+
+<defect type="Necessary" weight="1" comment="The sentence only says that the packages that exist at a given time are the ones that can be offered. This is evident and adds no information or constraint, so it is not needed in this subsection or anywhere else in the SRS.">Only the packages that are registered and available on the date of the purchase can be offered.</defect> <defect type="Conforming" weight="1" comment="The Limitations subsection must not state a dependence of the system on its environment. That the customer has a credit card or a telephone line is an assumption, which belongs in Section 5.1.">The customer must have a credit card or a telephone line.</defect> <defect type="Conforming" weight="1" comment="The Limitations subsection lists constraints on the system. This sentence states a rule of the business, which repeats the Scope and belongs, if at all, in the requirements.">The customer must pay the full price, and partial payments are not accepted</defect>. <defect type="Necessary" weight="1" comment="The opening hours of the customer service center are not needed to specify the system, since no requirement depends on them.">The customer service center operates from 8 AM to 9 PM.</defect>
+
+## 1.4 Definitions
+
+**Package:** a set of cable TV programs sold at a fee. **Purchase:** the contracting of a package by a customer. <defect type="Conforming" weight="1" comment="The Definitions section must define concepts only. This definition contains a behavior (“the system shall record the reason”), which is a requirement and belongs in Section 3.">**Rejection:** a purchase that is not completed, and the system shall record the reason for every rejection.</defect>
+
+## 1.5 SRS Overview
+
+This SRS follows the outline of ISO/IEC/IEEE 29148:2018. The sections of the outline that do not appear have been omitted for simplicity; notice that this reason is valid only in the framework of this academic course. Requirements are identified as FUN(xx) for functional, PER(xx) for performance, and QUA(xx) for quality requirements. Each requirement is a singular sentence that uses the verb "shall".
+
+# 2 References
+
+[REF-01] Line Qualification Service Interface, version 2.3, Telephone Company Technical Services, 2023.
+[REF-02] Payment Gateway API Reference, version 4.0, Payment Gateway Provider, 2024.
+
+# 3 Specific requirements
+
+## 3.1 Functions
+
+FUN(01) <defect type="Unambiguous" weight="1" comment="“etc.” leaves the list of options open, so the options that the menu must display can be interpreted differently.">When the system starts, it shall display a menu with the options: Purchase package, Manage packages, Manage operators, Daily report, etc.</defect>
+FUN(02) <defect type="Singular" weight="1" comment="The sentence combines the management of operators and the management of packages, which are verified separately. Each should be a separate requirement.">The system shall allow the registration, modification, and deletion of operators and packages</defect>.
+FUN(03) <defect type="Conforming" weight="1" comment="Section 1.5 states that every requirement uses the verb “shall”. This requirement uses “must”, which does not follow that convention.">The system must show the operator the characteristics and availability of each package on the date of the purchase</defect>.
+FUN(04) The system shall allow the operator to select the credit card or the telephone bill as the payment method of a purchase.
+FUN(05) <defect type="Complete" weight="1" comment="The requirement cites [REF-04], but Section 2 has no entry with that identifier. The technical criteria for validating the phone line cannot be known without the missing reference.">The system shall accept a phone line only if it satisfies the technical criteria defined in [REF-04].</defect>
+FUN(06) If the phone line validation fails, the system shall reject the purchase and store the reason for the rejection.
+FUN(07) <defect type="Correct" weight="1" comment="The Scope states that partial payments are not accepted. Allowing payment in instalments deviates from the Scope.">The system shall allow the customer to pay the price of a package in two instalments.</defect>
+FUN(08) <defect type="Unambiguous" weight="1" comment="“The most popular packages” does not define the criterion or the period used to measure popularity, so the ordering can be interpreted differently.">The system shall list the most popular packages first when it shows the available packages.</defect>
+FUN(09) <defect type="Necessary" weight="1" comment="The Scope excludes the installation of equipment at the customer&#x27;s home from TV2P. Scheduling installations is not needed by the specified system.">The system shall schedule the installation of the decoder at the customer's home.</defect>
+FUN(10) The system shall produce the daily report at 9 PM, with the purchases, the rejections, or all the records, as selected by the operator.
+FUN(11) <defect type="Feasible" weight="1" comment="Only the bank knows the balance of the card and the payment gateway does not reveal it, so the system cannot verify the funds beforehand.">The system shall verify that the credit card has enough funds before the charge is sent.</defect>
+FUN(12) When the customer selects the credit card, the system shall send the charge of the price of the package to the payment gateway.
+FUN(13) When the customer selects the telephone bill, the system shall register the price of the package to be charged in the telephone bill of the customer.
+FUN(14) <defect type="Appropriate" weight="1" comment="The requirement prescribes the database product and the user interface library. These are design decisions for which no need is stated, and they constrain the developers unnecessarily.">The system shall be implemented with an Oracle 19c database and a Java Swing user interface.</defect>
+
+## 3.2 Performance requirements
+
+PER(01) The system shall complete the validation of a phone line within 10 seconds.
+
+## 3.7 Software system attributes
+
+QUA(01) The system shall record the date and time of every purchase and rejection.
+QUA(02) <defect type="Verifiable" weight="1" comment="“Efficient” is subjective and has no measurable acceptance criterion, so it cannot be tested objectively.">The system shall make the purchase process efficient for the operators.</defect>
+
+# 5 Appendixes
+
+## 5.1 Assumptions and dependencies
+
+The system assumes that the date and time of the host computer are correct. It depends on the services of the telephone company and of the payment gateway.
+
+## 5.2 Acronyms and abbreviations
+
+**SRS:** Software Requirements Specification. **TV2P:** Cable TV Package Purchase System.
+    </text>
+</document>
