@@ -38,7 +38,9 @@ This SRS follows the outline of ISO/IEC/IEEE 29148:2018. The sections of the out
 # 2 References
 
 [REF-01] RFC 5321, Simple Mail Transfer Protocol, IETF, 2008.
+
 [REF-02] ACME Municipality SMS Gateway Interface Guide, version 1.0, ACME Municipality IT Services, 2024.
+
 [REF-03] ACME Municipality Letter Printing Service Interface Guide, version 1.0, ACME Municipality Mail Service, 2024.
 
 # 3 Specific requirements
@@ -74,7 +76,8 @@ The IT department of the ACME Municipality is responsible for the initial data l
 
 ## 5.2 Acronyms and abbreviations
 
-**SMTP:** Simple Mail Transfer Protocol. 
+**SMTP:** Simple Mail Transfer Protocol.
+
 **SRS:** Software Requirements Specification.
     </text>
 </document>

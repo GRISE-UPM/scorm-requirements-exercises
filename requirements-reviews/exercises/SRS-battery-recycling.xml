@@ -34,7 +34,21 @@ The machines are controlled with <defect type="Complete" weight="1" comment="The
 
 ## 1.4 Definitions
 
-**Batch:** set of batteries (normal and button) with a maximum weight of 2000 kg. **Button battery with manganese:** small battery whose recycling requires distilling the powder with a metallic catalyst. **Separator:** machine that separates the batteries into three groups (button batteries with manganese, button batteries without manganese, and normal batteries). **Shredder:** machine that shreds normal batteries to obtain battery powder and waste. **Minimum weight of the shredder:** amount of normal batteries in the bucket required to start the shredder, which is 300 kg. **Press:** machine that presses button batteries to obtain battery powder and waste. **Distiller:** machine that recovers metals from the battery powder. **Operator:** person who uses the system to control the process.
+**Batch:** set of batteries (normal and button) with a maximum weight of 2000 kg.
+
+**Button battery with manganese:** small battery whose recycling requires distilling the powder with a metallic catalyst.
+
+**Separator:** machine that separates the batteries into three groups (button batteries with manganese, button batteries without manganese, and normal batteries).
+
+**Shredder:** machine that shreds normal batteries to obtain battery powder and waste.
+
+**Minimum weight of the shredder:** amount of normal batteries in the bucket required to start the shredder, which is 300 kg.
+
+**Press:** machine that presses button batteries to obtain battery powder and waste.
+
+**Distiller:** machine that recovers metals from the battery powder.
+
+**Operator:** person who uses the system to control the process.
 
 ## 1.5 SRS Overview
 
@@ -43,7 +57,9 @@ This SRS follows the outline of ISO/IEC/IEEE 29148:2018. The sections of the out
 # 2 References
 
 [REF-01] Technical Manual of the Interfaces of the Recycling Machines (Annex B), ACME Engineering, version 1.4, 2009.
+
 <defect type="Conforming" weight="1" comment="A reference must identify the item univocally (title, issuer, version or date, link). “The current environmental regulations” does not say which regulations or which edition.">[REF-02] The current environmental regulations.</defect>
+
 [REF-03] ACME Conveyor Belt Control Interface Specification, version 1.2, ACME Engineering, 2009.
 
 # 3 Specific requirements
@@ -81,6 +97,8 @@ The machines are assumed to work according to their technical manual.
 
 ## 5.2 Acronyms and abbreviations
 
-**BRCS:** Battery Recycling Control System. **SRS:** Software Requirements Specification.
+**BRCS:** Battery Recycling Control System.
+
+**SRS:** Software Requirements Specification.
     </text>
 </document>

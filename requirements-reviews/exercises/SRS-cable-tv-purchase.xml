@@ -32,7 +32,11 @@ TV2P operators come from many different social environments, and therefore their
 
 ## 1.4 Definitions
 
-**Package:** a set of cable TV programs sold at a fee. **Purchase:** the contracting of a package by a customer. <defect type="Conforming" weight="1" comment="The Definitions section must define concepts only. This definition contains a behavior (“the system shall record the reason”), which is a requirement and belongs in Section 3.">**Rejection:** a purchase that is not completed, and the system shall record the reason for every rejection.</defect>
+**Package:** a set of cable TV programs sold at a fee.
+
+**Purchase:** the contracting of a package by a customer.
+
+<defect type="Conforming" weight="1" comment="The Definitions section must define concepts only. This definition contains a behavior (“the system shall record the reason”), which is a requirement and belongs in Section 3.">**Rejection:** a purchase that is not completed, and the system shall record the reason for every rejection.</defect>
 
 ## 1.5 SRS Overview
 
@@ -41,6 +45,7 @@ This SRS follows the outline of ISO/IEC/IEEE 29148:2018. The sections of the out
 # 2 References
 
 [REF-01] Line Qualification Service Interface, version 2.3, Telephone Company Technical Services, 2023.
+
 [REF-02] Payment Gateway API Reference, version 4.0, Payment Gateway Provider, 2024.
 
 # 3 Specific requirements
@@ -79,6 +84,8 @@ The system assumes that the date and time of the host computer are correct. It d
 
 ## 5.2 Acronyms and abbreviations
 
-**SRS:** Software Requirements Specification. **TV2P:** Cable TV Package Purchase System.
+**SRS:** Software Requirements Specification.
+
+**TV2P:** Cable TV Package Purchase System.
     </text>
 </document>

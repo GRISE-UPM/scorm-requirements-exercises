@@ -44,7 +44,9 @@ This SRS follows the outline of ISO/IEC/IEEE 29148:2018. The sections of the out
 # 2 References
 
 <defect type="Conforming" weight="1" comment="References must identify the item univocally (title, issuer, version or date, link). “Applicable elevator safety regulations” does not say which regulations or which edition.">[REF-01] Applicable elevator safety regulations.</defect>
+
 [REF-02] ACME FAMILY Panel Interface Specification, version 1.0, ACME Engineering, 2024.
+
 [REF-03] ACME FAMILY Door and Motor Drive Interface Specification, version 1.1, ACME Engineering, 2024.
 
 # 3 Specific requirements
@@ -75,7 +77,8 @@ QUA(01) <defect type="Verifiable" weight="1" comment="“Smoothly” is subjecti
 
 ## 5.2 Acronyms and abbreviations
 
-**ACME:** the manufacturer of the elevator. 
+**ACME:** the manufacturer of the elevator.
+
 **SRS:** Software Requirements Specification.
     </text>
 </document>
