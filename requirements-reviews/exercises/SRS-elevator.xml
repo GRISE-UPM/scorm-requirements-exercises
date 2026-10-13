@@ -54,16 +54,23 @@ This SRS follows the outline of ISO/IEC/IEEE 29148:2018. The sections of the out
 ## 3.1 Functions
 
 FUN(01) When a passenger presses a floor button on the cabin panel or a call button on a landing panel, the system shall move the cabin to the requested floor.
+
 FUN(02) The system shall accept multiple floor requests <defect type="Appropriate" weight="1" comment="The requirement prescribes how pending requests are stored (data structure and language). That is a design decision with no stated need, and it constrains the developers unnecessarily.">that are stored in a linked list implemented in C.</defect>
+
 FUN(03) The system shall keep the doors closed while the cabin is moving.
+
 FUN(04) <defect type="Unambiguous" weight="1" comment="“A sufficient time” is not defined, so the designer and the tester can each interpret it differently. A specific duration is needed.">The system shall keep the doors open for a sufficient time for passengers to enter or exit the cabin.</defect>
+
 FUN(05) The system shall light each button when it is pressed and keep it lit until the request is served.
+
 FUN(06) <defect type="Conforming" weight="1" comment="Section 1.5 requires the verb “shall” in every requirement. This requirement uses “should”, which expresses a recommendation instead of a binding obligation.">The system should ignore a floor request for the floor where the cabin is currently stopped.</defect>
+
 FUN(07) <defect type="Necessary" weight="1" comment="The scope states that the alarm is an independent device with its own hardware and software, outside this system. Specifying its behavior here adds a function that the system does not need.">When the alarm button is pressed, the system shall sound the alarm.</defect>
 
 ## 3.2 Performance requirements
 
 PER(01) The system shall start moving the cabin within 2 seconds after the doors are closed.
+
 PER(02) <defect type="Feasible" weight="1" comment="The cabin needs several seconds to travel between floors, so a trip cannot be completed one second after the button is pressed, regardless of the controller.">The system shall complete every trip within 1 second after the doors are closed.</defect>
 
 ## 3.7 Software system attributes

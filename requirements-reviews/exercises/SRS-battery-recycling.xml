@@ -67,22 +67,35 @@ This SRS follows the outline of ISO/IEC/IEEE 29148:2018. The sections of the out
 ## 3.1 Functions
 
 FUN(01) The system shall start the recycling process when the operator indicates that the separator is loaded with a batch.
+
 FUN(02) The system shall control the start and stop of the conveyor belts between the machines.
+
 FUN(03) <defect type="Conforming" weight="1" comment="Section 1.5 states that every requirement uses the verb “shall”. This requirement uses “should”, which expresses a recommendation instead of a binding obligation.">The system should stop the separator when an output tray reaches the weight limit, which is 300 kg per battery type.</defect>
+
 FUN(04) The system shall allow configuring the weight limit of the output trays of the separator.
+
 FUN(05) The system shall start the shredder when a bucket of normal batteries reaches the minimum weight of the shredder.
+
 FUN(06) <defect type="Complete" weight="1" comment="The maximum weight of the shredder is used, but it is not defined in Section 1.4 or anywhere else in the SRS, so the condition for stopping the shredder cannot be known.">The system shall stop the shredder when the powder bucket reaches the maximum weight of the shredder.</defect>
+
 FUN(07) The system shall distill separately the battery powder from normal batteries and the powder from button batteries.
+
 FUN(08) The system shall add catalyst to all the battery powder before distilling it.
+
 FUN(09) <defect type="Singular" weight="1" comment="The sentence combines two behaviors that are verified separately (starting the separator and recording the batch). Each should be a separate requirement.">The system shall start the separator and record the weight of the loaded batch.</defect>
+
 FUN(10) <defect type="Unambiguous" weight="1" comment="“A high level” does not define the level at which the distiller must stop, so each designer and tester can interpret it differently.">The system shall stop the distiller when the level of the output boxes is high.</defect>
+
 FUN(11) <defect type="Necessary" weight="1" comment="The Scope excludes the control of the incinerator and the transport of the waste. Controlling the incinerator is not needed by the specified system.">The system shall control the operation of the incinerator.</defect>
+
 FUN(12) <defect type="Appropriate" weight="1" comment="The requirement prescribes the control equipment and the programming language. These are design decisions for which no need is stated, and they constrain the developers unnecessarily.">The system shall run on a Siemens S7-1200 controller programmed in ladder logic.</defect>
+
 FUN(13) The system shall allow the managers to consult the audit log of the operations performed.
 
 ## 3.2 Performance requirements
 
 PER(01) The system shall update the displayed status of the process at least every 2 seconds.
+
 PER(02) <defect type="Feasible" weight="1" comment="This availability allows only a few seconds of downtime per year, which requires redundant hardware that is not part of the single dedicated server described in the Product perspective.">The system shall be available 99.999% of the working hours.</defect>
 
 ## 3.7 Software system attributes

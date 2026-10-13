@@ -53,18 +53,31 @@ This SRS follows the outline of ISO/IEC/IEEE 29148:2018. The sections of the out
 ## 3.1 Functions
 
 FUN(01) <defect type="Unambiguous" weight="1" comment="“etc.” leaves the list of options open, so the options that the menu must display can be interpreted differently.">When the system starts, it shall display a menu with the options: Purchase package, Manage packages, Manage operators, Daily report, etc.</defect>
+
 FUN(02) <defect type="Singular" weight="1" comment="The sentence combines the management of operators and the management of packages, which are verified separately. Each should be a separate requirement.">The system shall allow the registration, modification, and deletion of operators and packages</defect>.
+
 FUN(03) <defect type="Conforming" weight="1" comment="Section 1.5 states that every requirement uses the verb “shall”. This requirement uses “must”, which does not follow that convention.">The system must show the operator the characteristics and availability of each package on the date of the purchase</defect>.
+
 FUN(04) The system shall allow the operator to select the credit card or the telephone bill as the payment method of a purchase.
+
 FUN(05) <defect type="Complete" weight="1" comment="The requirement cites [REF-04], but Section 2 has no entry with that identifier. The technical criteria for validating the phone line cannot be known without the missing reference.">The system shall accept a phone line only if it satisfies the technical criteria defined in [REF-04].</defect>
+
 FUN(06) If the phone line validation fails, the system shall reject the purchase and store the reason for the rejection.
+
 FUN(07) <defect type="Correct" weight="1" comment="The Scope states that partial payments are not accepted. Allowing payment in instalments deviates from the Scope.">The system shall allow the customer to pay the price of a package in two instalments.</defect>
+
 FUN(08) <defect type="Unambiguous" weight="1" comment="“The most popular packages” does not define the criterion or the period used to measure popularity, so the ordering can be interpreted differently.">The system shall list the most popular packages first when it shows the available packages.</defect>
+
 FUN(09) <defect type="Necessary" weight="1" comment="The Scope excludes the installation of equipment at the customer&#x27;s home from TV2P. Scheduling installations is not needed by the specified system.">The system shall schedule the installation of the decoder at the customer's home.</defect>
+
 FUN(10) The system shall produce the daily report at 9 PM, with the purchases, the rejections, or all the records, as selected by the operator.
+
 FUN(11) <defect type="Feasible" weight="1" comment="Only the bank knows the balance of the card and the payment gateway does not reveal it, so the system cannot verify the funds beforehand.">The system shall verify that the credit card has enough funds before the charge is sent.</defect>
+
 FUN(12) When the customer selects the credit card, the system shall send the charge of the price of the package to the payment gateway.
+
 FUN(13) When the customer selects the telephone bill, the system shall register the price of the package to be charged in the telephone bill of the customer.
+
 FUN(14) <defect type="Appropriate" weight="1" comment="The requirement prescribes the database product and the user interface library. These are design decisions for which no need is stated, and they constrain the developers unnecessarily.">The system shall be implemented with an Oracle 19c database and a Java Swing user interface.</defect>
 
 ## 3.2 Performance requirements
@@ -74,6 +87,7 @@ PER(01) The system shall complete the validation of a phone line within 10 secon
 ## 3.7 Software system attributes
 
 QUA(01) The system shall record the date and time of every purchase and rejection.
+
 QUA(02) <defect type="Verifiable" weight="1" comment="“Efficient” is subjective and has no measurable acceptance criterion, so it cannot be tested objectively.">The system shall make the purchase process efficient for the operators.</defect>
 
 # 5 Appendixes

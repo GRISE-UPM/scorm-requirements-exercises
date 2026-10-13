@@ -48,15 +48,25 @@ This SRS follows the outline of ISO/IEC/IEEE 29148:2018. The sections of the out
 ## 3.1 Functions
 
 FUN(01) The system shall allow a user to reserve a book, whether or not the book is on loan.
+
 FUN(02) <defect type="Conforming" weight="1" comment="Section 1.5 states that every requirement uses the verb “shall”. This requirement uses “should”, which expresses a recommendation instead of a binding obligation.">The system should allow a user to consult their reservations.</defect>
+
 FUN(03) <defect type="Singular" weight="1" comment="The sentence joins two separate behaviors: cancelling and extending a reservation. Each should be a separate requirement.">The system shall allow a user to cancel or extend a reservation.</defect>
+
 FUN(04) The system shall allow each user to choose the notification type (e-mail, SMS, or letter).
+
 FUN(05) <defect type="Unambiguous" weight="1" comment="“before” does not define how many days before the due date the notification is sent, so each designer and tester can interpret it differently.">The system shall notify the user with the oldest reservation, before the loan due date, using the chosen notification type.</defect>
+
 FUN(06) <defect type="Necessary" weight="1" comment="The Scope states that ACMELIS does not handle the acquisition of books. Requesting the purchase of a book is an acquisition task, so it is not needed by the specified system.">The system shall allow library staff to request the purchase of a book that has more than 5 reservations per week during four consecutive weeks.</defect>
+
 FUN(07) The system shall allow the librarian to register a loan requested by a user at the library.
+
 FUN(08) The system shall set the loan period to 21 days for every user.
+
 FUN(09) <defect type="Correct" weight="1" comment="Library staff should be able to use the system. maybe they cannot get loans, but they should be able to access other features.">The system shall not allow a suspended user to use the system.</defect>
+
 FUN(10) <defect type="Complete" weight="1" comment="The requirement cites [REF-04], but Section 2 has no entry with that identifier. The content of the notice cannot be known without the missing reference.">The system shall send the overdue notices to the user, with the notification type chosen, using the template defined in [REF-04].</defect>
+
 FUN(11) <defect type="Appropriate" weight="1" comment="The requirement prescribes the web server and the database product. These are design decisions for which no need is stated, and they constrain the developers unnecessarily.">The system shall run on an Apache Tomcat 9 web server with a PostgreSQL 14 database.</defect>
 
 ## 3.2 Performance requirements
@@ -66,6 +76,7 @@ PER(01) The system shall serve 20 simultaneous users with a response time of les
 ## 3.7 Software system attributes
 
 QUA(01) <defect type="Verifiable" weight="1" comment="“Resist brute-force attacks” does not state how many attempts or what attack rate must be withstood, so there is no objective criterion to decide by testing whether the requirement is met.">The authentication mechanism shall resist brute-force attacks.</defect>
+
 QUA(02) <defect type="Feasible" weight="1" comment="Reception depends on the mobile operator and on the phone of the user (switched off, out of coverage), which the system does not control, so it can only guarantee that the message is sent.">The system shall guarantee that every SMS notification is received by the user.</defect>
 
 # 5 Appendixes
